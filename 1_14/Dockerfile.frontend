@@ -7,7 +7,7 @@ WORKDIR /usr/src/app
 COPY 1_12 .
 RUN node -v && npm -v && npm install
 RUN npm install -g serve
-ENV REACT_APP_BACKEND_URL=http://127.0.0.1:8080
+ENV REACT_APP_BACKEND_URL=http://localhost:8080
 RUN npm run build
 EXPOSE 5001
 CMD ["-s", "-l", "5001", "build"]
